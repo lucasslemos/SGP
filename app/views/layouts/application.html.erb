@@ -2,15 +2,85 @@
 <html>
   <head>
     <title>SGP</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
-
   <body>
-    <%= yield %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-2 d-flex justify-content-center">
+          <div class="sidebar_home d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; display: flex;">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+              <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+              <span class="fs-4">Sidebar</span>
+            </a>
+            <hr>
+            <ul class="nav nav-pills flex-column mb-auto">
+              <li class="nav-item">
+                <a href="#" class="nav-link active" aria-current="page">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#home"/></svg>
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#speedometer2"/></svg>
+                  Dashboard
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#table"/></svg>
+                  Orders
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"/></svg>
+                  Products
+                </a>
+              </li>
+              <li>
+                <a href="#" class="nav-link link-dark">
+                  <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"/></svg>
+                  Customers
+                </a>
+              </li>
+            </ul>
+            <hr>
+            <div class="dropdown">
+              <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                <strong>mdo</strong>
+              </a>
+              <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
+                <li><a class="dropdown-item" href="#">New project...</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Sign out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-10 d-flex justify-content-center">
+          <%= yield %>
+        </div>
+      </div>
+       <!-- Copyright -->
+      <div class="row">
+        <div class="col-12 footer_home text-center p-3">
+          © 2020 Copyright: www.lucas_lemos.com
+        </div>
+      </div>
+      <!-- Copyright -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   </body>
 </html>
