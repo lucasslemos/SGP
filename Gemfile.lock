@@ -194,6 +194,9 @@ GEM
     rubocop-rspec (2.11.1)
       rubocop (~> 1.19)
     ruby-progressbar (1.11.0)
+    simple_form (5.1.0)
+      actionpack (>= 5.2)
+      activemodel (>= 5.2)
     solargraph (0.45.0)
       backport (~> 1.2)
       benchmark
@@ -259,6 +262,7 @@ DEPENDENCIES
   rubocop-performance
   rubocop-rails
   rubocop-rspec
+  simple_form
   solargraph
   sprockets-rails
   stimulus-rails
