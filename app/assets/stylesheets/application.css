@@ -26,14 +26,11 @@ body {
   padding: 30px 30px 30px;
   width: 100%;
 }
-
-.sidebar_home{
-  margin-top: 20px;
-  background-color: #ffffff;
-  box-shadow: 0 0 1em rgba(116, 115, 109, 0.452);
-  width: 100%;
+@media (max-width: 416px) {
+.fixed-bottom {
+  position: inherit;
 }
-
+}
 .col-xs-12 {
   width: 100%;
 }
