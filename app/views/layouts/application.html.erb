@@ -9,12 +9,21 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
+    <style>
+      .painel{
+        /* margin-top: 20px; */
+        background-color: #fff;
+        /* box-shadow: 0 0 1em rgba(116, 115, 109, 0.452); */
+        padding: 30px 30px 30px;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-2 d-flex justify-content-center">
-          <div class="sidebar_home d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; display: flex;">
+          <div class="my-3 p-3 d-flex flex-column flex-shrink-0 bg-light rounded" style="width: 280px; display: flex;">
             <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
               <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
               <span class="fs-4">Sidebar</span>
@@ -68,16 +77,18 @@
             </div>
           </div>
         </div>
-        <div class="col-md-10">
-          <%= yield %>
+        <div class="col-md-10 d-flex justify-content-center">
+            <%= yield %>
         </div>
       </div>
-      <footer class="footer fixed-bottom mt-auto py-3 bg-light">
-        <div class="container d-flex justify-content-center">
-          <span class="text-muted"> © 2020 Copyright: www.lucas_lemos.com</span>
-        </div>
-      </footer>
     </div>
+    <footer class="footer fixed-bottom mt-auto py-3 bg-light">
+      <div class="container d-flex justify-content-center">
+        <span class="text-muted"> © 2020 Copyright: www.lucas_lemos.com</span>
+      </div>
+    </footer>
+    
+    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
   </body>
