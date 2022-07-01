@@ -1,0 +1,59 @@
+<div class="px-4 py-5 px-md-5 text-center text-lg-start" style="background-color: hsl(0, 0%, 96%)">
+  <div class="container">
+    <div class="row gx-lg-5 align-items-center">
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <h1 class="my-5 display-3 fw-bold ls-tight">
+          Banco de Projetos <br />
+          <span class="text-primary">for your business</span>
+        </h1>
+        <p style="color: hsl(217, 10%, 50.8%); text-align: justify; text-justify: inter-word;">
+          Este espaço, denominado Banco de Projetos, foi criado para disseminar conhecimentos através da contribuição de todos. 
+          Experiências de sucesso despertam a curiosidade de quem tem sede de conhecer novas propostas inovadoras. Acreditamos 
+          que a contrapartida de informações na área de convênios é de fundamental importância para o bom desempenho de nossos 
+          trabalhos.
+        </p>
+      </div>
+      <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="card">
+          <div class="card-body py-5 px-md-5">
+            <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+
+              <div class="row">
+                <div class="col-md-12 mb-4">
+                  <div class="">
+                    <label class="form-label">Nome completo</label>
+                    <%= f.input :username, label: false, required: true %>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-4">
+                <label class="form-label">Endereço de Email</label>
+                <%= f.input :email, label: false, required: true, autofocus: true, input_html: { autocomplete: "email" }%>
+              </div>
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <label class="form-label">Senha</label>
+                  <%= f.input :password, label: false, required: true, hint: ("#{@minimum_password_length} mínimo de caracteres" if @minimum_password_length), input_html: { autocomplete: "new-password" } %>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <label class="form-label">Confirmar Senha</label>
+                  <%= f.input :password_confirmation, label: false, required: true,  input_html: { autocomplete: "new-password" } %>
+                </div>
+              </div>
+              
+              <div class="form-check justify-content-center mb-4">
+                <label class="form-check-label">
+                  Assine a nossa newsletter
+                </label>
+                <input class="form-check-input me-2" type="checkbox" value="" id="form2Example33" checked />
+              </div>
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Sign up
+              </button>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
